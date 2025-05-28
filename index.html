@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nightmar3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  </head>
+<style>
+body {
+  font-family: 'Special Elite', cursive;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+#demo {
+  font-size: 48px;
+  margin-top: 20%;
+}
+</style>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'NiGHTMAR3';
+var speed = 250;
+
+typeWriter();
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }else{
+
+    setTimeout(()=>{
+      document.getElementById("demo").innerHTML = '';
+      i=0;
+      setTimeout(typeWriter, speed);
+    }, 2000);
+      
+  }
+}
+</script>
+
+</body>
+</html>
